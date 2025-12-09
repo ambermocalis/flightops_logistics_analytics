@@ -1,0 +1,15 @@
+Steps to completing the project:
+
+1. Create the GitHub repo with the structure above. ✔️
+
+2. Download 6–12 months of BTS/Kaggle flight data to start. (2018-2019??) ✔️
+
+3. Start with the Python notebook:
+ - Load + clean data
+ - Define ARR_DEL15
+ - Do EDA
+ - Build 1–2 baseline models
+
+4. Design the SQL schema and create_tables.sql.
+
+5. Once data is in SQL, build the dashboard (use saved queries as the logic).
