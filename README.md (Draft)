@@ -106,53 +106,49 @@ This approach is standard practice in data science and ensures the repo stays ma
 ```bash
 conda env create -f environment.yml
 conda activate flightops
-
-2. Download the BTS data
+```
+**2. Download the BTS data**
 
 From the repo root:
-
+```bash
 python download_bts_ontime.py
-
+```
 
 This populates:
 
 data/raw/    # zip + CSV files
 data/raw/csv/
 
-3. Run notebooks
+**3. Run notebooks**
 
 Launch Jupyter:
-
+```bash
 jupyter lab
-
+```
 
 Open notebooks in notebooks/ to explore EDA, feature engineering, and model training.
 
-📚 Data Source
+## 📚 Data Source
 
 U.S. Department of Transportation
 Bureau of Transportation Statistics (BTS)
-On-Time Reporting Carrier On-Time Performance (1987–Present)
-https://transtats.bts.gov/
+**On-Time Reporting Carrier On-Time Performance (1987–Present)**
+[https://transtats.bts.gov/](https://transtats.bts.gov/)
 
-🚀 Status
+## 🚀 Status
 
 📌 In development:
+- Data documentation
+- Python model notebook
+- SQL schema and queries
+- Dashboard prototype
 
-Data documentation
-
-Python model notebook
-
-SQL schema and queries
-
-Dashboard prototype
-
-📄 License
+## 📄 License
 
 This project is licensed under the AGPL-3.0 License.
 See the LICENSE file for details.
 
-🙌 Contact
+## 🙌 Contact
 
 Created by Amber Mocalis
 For questions or collaboration opportunities, feel free to connect via LinkedIn.
