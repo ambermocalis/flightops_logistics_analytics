@@ -103,9 +103,11 @@ This approach is standard practice in data science and ensures the repo stays ma
 
 ### **1. Create the Conda environment**
 
+Dependencies are managed with Conda using a curated environment.yml to ensure portability across macOS (Apple Silicon), Linux, and CI environments.
+
 ```bash
 conda env create -f environment.yml
-conda activate flightops
+conda activate datasci311
 ```
 **2. Download the BTS data**
 
