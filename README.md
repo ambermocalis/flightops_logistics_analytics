@@ -153,4 +153,4 @@ See the LICENSE file for details.
 ## 🙌 Contact
 
 Created by Amber Mocalis
-For questions or collaboration opportunities, feel free to connect via LinkedIn.
+For questions or collaboration opportunities, feel free to connect via [LinkedIn](https://www.linkedin.com/in/ambermocalis).
