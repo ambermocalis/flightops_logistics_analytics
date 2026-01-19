@@ -5,7 +5,7 @@ Steps to completing the project:
 2. Download 6–12 months of BTS/Kaggle flight data to start. (2018-2019??) ✔️
 
 3. Start with the Python notebook:
- - Load + clean data
+ - Load + clean data ✔️
  - Define ARR_DEL15
  - Do EDA
  - Build 1–2 baseline models
