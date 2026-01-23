@@ -53,28 +53,32 @@ The dashboard visualizes:
 (Initial structure — will grow as the project evolves.)
 
 flightops_logistics_analytics/
+.
 │
-├── download_bts_ontime.py # Automated BTS monthly downloader
-├── environment.yml # Conda environment file
+├── dashboard/
+│ └── # Power BI / Tableau files 
 │
 ├── data/
-│ ├── raw/ # Auto-populated by downloader script (ignored by Git)
-│ └── processed/ # Cleaned subsets for modeling/SQL (ignored by Git)
-│
-├── notebooks/ # Python notebooks for EDA + modeling
-│
-├── sql/
-│ ├── create_tables.sql
-│ ├── load_data.sql
-│ └── analytics_queries.sql
-│
-├── dashboard/ # Power BI / Tableau files (ignored by Git unless included intentionally)
+│ └── raw/  # Auto-populated by downloader script (ignored by Git)
+|    └──csv/
 │
 ├── docs/
 │ ├── data_dictionary.md
 │ ├── erd.png
 │ └── dashboard_screenshots/
 │
+├── notebooks/ # Python notebooks for EDA + modeling
+│ ├── 01_flight_delay_predictions.ipynb
+│ └── download_bts_ontime.py # Automated BTS monthly downloader
+│
+├── sql/
+│ ├── create_tables.sql
+│ ├── load_data.sql
+│ └── analytics_queries.sql
+│
+├── environment.lock.yml # Conda environment file (ignored by Git)
+├── environment.yml # Conda environment file
+├── LICENSE
 └── README.md
 
 

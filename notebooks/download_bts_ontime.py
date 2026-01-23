@@ -3,7 +3,7 @@
 Download BTS TranStats On-Time Performance monthly files.
 
 Run from the repo root:
-    python download_bts_ontime.py
+    python notebooks/download_bts_ontime.py
 """
 
 import os
