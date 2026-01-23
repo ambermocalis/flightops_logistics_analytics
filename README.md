@@ -51,7 +51,7 @@ The dashboard visualizes:
 ## 📁 Repository Structure
 
 (Initial structure — will grow as the project evolves.)
-
+```
 flightops_logistics_analytics/
 .
 │
@@ -80,7 +80,7 @@ flightops_logistics_analytics/
 ├── environment.yml # Conda environment file
 ├── LICENSE
 └── README.md
-
+```
 
 ---
 
