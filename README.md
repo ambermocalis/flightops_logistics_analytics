@@ -1,4 +1,4 @@
-# ✈️ FlightOps: U.S. Flight Delay Prediction & Operational Performance Dashboard (DRAFT)
+# ✈️ FlightOps: U.S. Flight Delay Prediction & Operational Performance Dashboard
 
 ### Logistics analytics with machine learning, SQL, and BI dashboards
 
@@ -45,6 +45,15 @@ The dashboard visualizes:
 - Worst-performing routes  
 - Cancellation/diversion behavior  
 - Flight throughput metrics  
+
+---
+## Insights from work in progress
+#### Model Comparison & Recommendation
+A logistic regression model was used as an interpretable baseline to estimate arrival delay risk. A gradient boosting classifier was then trained on the same feature set to capture nonlinear and interaction effects.
+
+The gradient boosting model achieved a modest improvement in ROC AUC (0.634 vs 0.617), indicating better ranking of high-risk flights. However, the improvement was incremental rather than dramatic, reflecting the inherently noisy nature of airline delay data and the limited feature set used.
+
+Given this tradeoff, logistic regression is recommended for policy analysis and stakeholder communication due to its interpretability, while gradient boosting is better suited for operational risk scoring where marginal performance gains translate to meaningful improvements at scale.
 
 ---
 
@@ -111,28 +120,25 @@ Dependencies are managed with Conda using a curated environment.yml to ensure po
 
 ```bash
 conda env create -f environment.yml
+```
+```bash
 conda activate datasci311
 ```
 **2. Download the BTS data**
 
 From the repo root:
 ```bash
-python download_bts_ontime.py
+python notebooks/download_bts_ontime.py
 ```
 
 This populates:
 
-data/raw/    # zip + CSV files
+data/raw/    
 data/raw/csv/
 
 **3. Run notebooks**
 
-Launch Jupyter:
-```bash
-jupyter lab
-```
-
-Open notebooks in notebooks/ to explore EDA, feature engineering, and model training.
+Open `01_flight_delay_predictions` in notebooks/ to explore EDA, feature engineering, and model training.
 
 ## 📚 Data Source
 
@@ -157,4 +163,4 @@ See the LICENSE file for details.
 ## 🙌 Contact
 
 Created by Amber Mocalis
-For questions or collaboration opportunities, feel free to connect via [LinkedIn](https://www.linkedin.com/in/ambermocalis).
+For questions or collaboration opportunities, I would love to connect via [LinkedIn](https://www.linkedin.com/in/ambermocalis).
