@@ -3,7 +3,7 @@
 Download BTS TranStats On-Time Performance monthly files.
 
 Run from the repo root:
-    python notebooks/download_bts_ontime.py
+    python src/download_bts_ontime.py
 """
 
 import os
@@ -14,7 +14,8 @@ from io import BytesIO
 
 # ------------ CONFIGURE THESE ------------- #
 YEARS = [2019]          # years you want
-MONTHS = list(range(1, 13))   # 1–12
+MONTHS = [1, 2, 3]    # months you want
+# ----------------------------------------- #
 
 BASE_URL = (
     "https://transtats.bts.gov/PREZIP/"
@@ -45,6 +46,11 @@ def download_and_extract(year: int, month: int) -> None:
     url = BASE_URL.format(year=year, month=month)
     filename = f"On_Time_Reporting_Carrier_On_Time_Performance_1987_present_{year}_{month}.zip"
     zip_path = RAW_DIR / filename
+
+    # Skip if already downloaded
+    if zip_path.exists():
+        print(f"\n[{year}-{month:02d}] File already exists at {zip_path} – skipping download.")
+        return
 
     print(f"\n[{year}-{month:02d}] Downloading from {url}")
 
